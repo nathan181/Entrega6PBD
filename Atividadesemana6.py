@@ -251,24 +251,18 @@ for word, count in words_and_counts.items():
     if (count > 1):
         print(word, count)
 
-#----------------------------------------------------------------------------------
-#                             Atividade Semana 06
+
 # 1 Construa um gráfico de linha que mostra o número de amigos por usuário.
 
 users_list = [user['name'] for user in users]
 users_number_of_friends_list = [number_of_friends(user) for user in users]
 
 
-#cria um gráfico
 plt.plot (users_list, users_number_of_friends_list, color='red', marker='o', linestyle='solid')
-#adiciona título
 plt.title ("Número de amigos por usuário")
-#rótulo do eixo Y
 plt.ylabel ("Número de amigos")
-#mostra
 plt.show()
 
-#------------------------------------
 # 2 Construa um gráfico de dispersão envolvendo salário e tempo de experiência.
 salaries, tenures = [], []
 for i, j in salaries_and_tenures:
@@ -281,7 +275,7 @@ print(tenures)
 
 labels = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
 plt.scatter (salaries, tenures)
-#rotula cada posição
+
 for label, salaries_value, tenures_value in zip(labels, salaries, tenures):
     plt.annotate(
         label,
@@ -294,7 +288,7 @@ plt.xlabel ("Salário")
 plt.ylabel ("Tempo de experiência")
 plt.show()
 
-#------------------------------------
+
 # 3 Construa um histograma envolvendo dados de pagantes e não pagantes.
 
 list_tenures = []
@@ -324,7 +318,7 @@ plt.ylabel("Pagantes e não pagantes")
 plt.title ("Pagantes e não pagantes por faixa de salário")
 plt.show()
 
-#------------------------------------
+
 # 4 Construa um histograma de palavras em interesses. Por exemplo, a palavra learning pode
 # aparecer em machine learning e em deep learning. Quebre cada interesse em palavras para fazer
 # a contagem e montar o histograma.
